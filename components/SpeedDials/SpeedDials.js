@@ -54,18 +54,31 @@ export default function SpeedDials() {
 
   return (
     <div className="card">
-      <div className="flex flex-col justify-end h-full relative">
+    <div className="flex flex-col justify-end h-full relative">
+      {/* Conditionally render ScrollTop button */}
+      {!speedDialOpen && (
+        <ScrollTop
+          threshold={100}
+          className="w-8 h-8 rounded-full bg-[#36a39e] flex items-center justify-center shadow-lg fixed bottom-20 left-8"
+          icon="pi pi-arrow-up text-white text-lg"
+        />
+      )}
       
-          <ScrollTop
-            threshold={100}
-            className="w-12 h-12 rounded-full bg-[#447ab1] flex items-center justify-center shadow-lg fixed bottom-20 right-8"
-            icon="pi pi-arrow-up text-white text-lg"
-          />
-        
-        
-        {/* SpeedDial button */}
-     
-      </div>
+      {/* SpeedDial button */}
+      <SpeedDial
+        className="bg-[#36a39e] h-12 w-12 text-white cursor-pointer shadow-xl flex items-center justify-center rounded-full hover:bg-[#0b8d7c] fixed bottom-6 left-6"
+        model={items}
+        radius={90}
+        type="quarter-circle"
+        direction="up-right"
+        showIcon="pi pi-phone"
+        hideIcon="pi pi-times"
+        style={{ borderRadius: "50%" }}
+        onClick={() => setSpeedDialOpen(!speedDialOpen)} // Toggle SpeedDial state on click
+        onHide={() => setSpeedDialOpen(false)} // Close SpeedDial
+        onShow={() => setSpeedDialOpen(true)} // Open SpeedDial
+      />
     </div>
+  </div>
   );
 }

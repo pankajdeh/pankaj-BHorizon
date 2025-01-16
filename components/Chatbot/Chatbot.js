@@ -29,7 +29,7 @@ const Chatbot = () => {
   //  className="fixed  bottom-3 right-0 m-4 z-50  bg-transparent rounded-lg"
  
         <div
-         className=' w-20 h-20 fixed right-4 bottom-4 p-4 rounded-full border z-50'
+         className=' w-20 h-20 fixed right-4 bottom-4 p-4  z-50'
         >
           <div
           className='fixed  '

@@ -35,12 +35,12 @@ export default function RootLayout({ children }) {
          <AppHeader/>
 
          <div>
-          {/* <Chatbot/> */}
+          <Chatbot/>
          </div>
 
-         {/* <div className="fixed bottom-8 left-8 z-50">
+         <div className="fixed bottom-8 left-8 z-50">
           <SpeedDials />
-        </div> */}
+        </div>
 
          {children}
          <Footer/>
