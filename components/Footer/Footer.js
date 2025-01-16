@@ -1,13 +1,18 @@
 import Link from "next/link";
-import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+// import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import wave from "@/public/Images/wave.webp";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { FaArrowRight } from "react-icons/fa";
+
+
 import Image from "next/image";
 function Footer() {
   return (
     <>
     <Image src={wave} alt='wave' className='w-full relative -z-1 mt-5'/>
 
-    <footer className="bg-[#f9fbfe] py-12 px-4 md:px-6 lg:px-8">
+    <footer className="bg-[#f9fbfe]  py-12 px-4 md:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company Info */}
@@ -25,28 +30,63 @@ function Footer() {
               technology services, ranging from ideation to designing and from development to
               deployment.
             </p>
-            <div className="flex space-x-4">
-              <Link href="#" className="text-blue-600 hover:text-blue-700">
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="#" className="text-blue-600 hover:text-blue-700">
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="#" className="text-blue-600 hover:text-blue-700">
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-              <Link href="#" className="text-blue-600 hover:text-blue-700">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-            </div>
+
+        <div>
+        <div className="flex space-x-6  mt-4">
+      {/* Facebook */}
+      <Link
+        href="#"
+        className="group relative text-[#132b57] hover:text-[#365b8b] transition-all duration-300"
+        aria-label="Facebook"
+      >
+        <FaFacebookF
+          className="h-8 w-8 transition-transform duration-300 group-hover:scale-110"
+        />
+        <span className="sr-only">Facebook</span>
+      </Link>
+
+      {/* Instagram */}
+      <Link
+        href="#"
+        className="group relative text-[#132b57] hover:text-[#365b8b] transition-all duration-300"
+        aria-label="Instagram"
+      >
+        <FaInstagram
+          className="h-8 w-8 transition-transform duration-300 group-hover:scale-110"
+        />
+        <span className="sr-only">Instagram</span>
+      </Link>
+
+      {/* LinkedIn */}
+      <Link
+        href="#"
+        className="group relative text-[#132b57] hover:text-[#365b8b] transition-all duration-300"
+        aria-label="LinkedIn"
+      >
+        <FaLinkedinIn
+          className="h-8 w-8 transition-transform duration-300 group-hover:scale-110"
+        />
+        <span className="sr-only">LinkedIn</span>
+      </Link>
+
+      {/* Twitter */}
+      <Link
+        href="#"
+        className="group relative text-[#132b57] hover:text-[#365b8b] transition-all duration-300"
+        aria-label="Twitter"
+      >
+        <FaTwitter
+          className="h-8 w-8 transition-transform duration-300 group-hover:scale-110"
+        />
+        <span className="sr-only">Twitter</span>
+      </Link>
+    </div>
+        </div>
+
           </div>
 
-          {/* First Useful Links Column */}
-          <div>
+          {/* First Useful Links Column  - [#365b8b]*/}
+          {/* <div>
             <h3 className="text-lg font-semibold text-blue-600 mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
@@ -92,69 +132,82 @@ function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
-
-          {/* Second Useful Links Column
-          <div>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">Useful link</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-blue-600">
-                  IT Consultancy
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-blue-600">
-                  Medical Coding Services
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-blue-600">
-                  Mobile App Development
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-blue-600">
-                  E-Commerce
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-blue-600">
-                  Enterprise Software Development
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-blue-600">
-                  Software Testing
-                </Link>
-              </li>
-            </ul>
           </div> */}
 
+
+
+<div className="lg:mt-0 mt-4 ">
+      <h3 className="text-lg font-semibold text-black mb-4">Services</h3>
+      <ul className="space-y-4">
+        {[
+          { href: "/Services/ITApplicationDevelopment", label: "IT Application Development" },
+          { href: "/Services/AI-MachineLearning&DataScience", label: "AI, Machine Learning, and Data Science" },
+          { href: "/Services/GeospatialDevelopmentandGeoAI", label: "Geospatial Development and GeoAI" },
+          { href: "/Services/DatabaseDevelopment", label: "Database Development and Custom Report Generation" },
+          { href: "/Services/IT-EnabledServices", label: "IT-Enabled Services (ITES)" },
+          { href: "/Services/BusinessIntelligence", label: "Business Intelligence and Business Analytics" },
+          { href: "/Services/Cybersecurity", label: "Cybersecurity and IT Governance" },
+          { href: "/Services/ITInfrastructure", label: "IT Infrastructure, Networking & Continuity" },
+        ].map((service, index) => (
+          <li key={index}>
+            <Link
+              href={service.href}
+              className="flex gap-x-4 text-gray-600 hover:text-[#132b57] group transition-all duration-300"
+            >
+              <FaArrowRight
+                className="text-[#132b57] transition-transform duration-300 group-hover:translate-x-1"
+              />
+              <span>{service.label}</span>
+              
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+
           {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">Contact Us</h3>
-            <div className="space-y-4">
-              <div>
-                <p className="font-medium">Beyond Horizon IT SERVICES INDIA</p>
-                <address className="text-gray-600 not-italic">
-                  The Workvilla, Ground Floor,
-                  <br />
-                  No 306, Anna Salai,
-                  <br />
-                  Thousand Lights, Chennai-600006.
-                </address>
-              </div>
-              <div>
-                <Link href="mailto:info@Beyond-Horizon.com" className="text-gray-600 hover:text-blue-600 block">
-                  info@Beyond-Horizon.com
-                </Link>
-                <Link href="tel:+918035384274" className="text-gray-600 hover:text-blue-600 block">
-                  +918035384274
-                </Link>
-              </div>
-            </div>
-          </div>
+
+<div className="space-y-6  text-black mt-4 lg:mt-0">
+  <div className="text-lg  font-semibold"> Contact Us</div>
+  {/* Email Section */}
+  <div className="flex items-center gap-4 group">
+    <div className="bg-[#447ab1] p-3 rounded-full transition-all duration-300 group-hover:bg-[#365b8b]">
+      <Mail className="text-white w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+    </div>
+    <div className="flex flex-col">
+      <span className="text-black group-hover:text-[#365b8b] transition-colors duration-300">
+        support@beyondhorizontech.com
+      </span>
+      <span className="text-black group-hover:text-[#365b8b] transition-colors duration-300">
+        projects@beyondhorizontech.com
+      </span>
+    </div>
+  </div>
+
+  {/* Phone Section */}
+  <div className="flex items-center gap-4 group">
+    <div className="bg-[#447ab1] p-3 rounded-full transition-all duration-300 group-hover:bg-[#365b8b]">
+      <Phone className="text-white w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+    </div>
+    <span className="text-black group-hover:text-[#365b8b] transition-colors duration-300">
+      +971 582810106
+    </span>
+  </div>
+
+  {/* Address Section */}
+  <div className="flex items-center gap-4 group">
+    <div className="bg-[#447ab1] group-hover:bg-[#365b8b] p-3 rounded-full transition-all duration-300 ">
+      <MapPin className="text-white w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+    </div>
+    <div className="text-black group-hover:text-[#365b8b] transition-colors duration-300">
+      <p>Abu Dhabi, United Arab Emirates</p>
+    </div>
+  </div>
+</div>
+
+
+
         </div>
 
         {/* Copyright */}

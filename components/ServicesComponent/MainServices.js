@@ -15,6 +15,7 @@ import { MdScience, MdBusinessCenter } from 'react-icons/md';
 import ShineBorder from "@/components/ui/shine-border";
 import Link from 'next/link';
 
+
 const MainServices = () => {
   const services = [
     {
@@ -121,10 +122,11 @@ const MainServices = () => {
               <div className="mt-auto text-center">
                 <Link
                   href={service.link}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700  transition"
+                  className="bg-[#447ab1] hover:bg-[#365b8b]  text-white px-4 py-2 rounded-md hover:bg-blue-700  transition"
                 >
                   Learn More
                 </Link>
+                
               </div>
             </ShineBorder>
           ))}

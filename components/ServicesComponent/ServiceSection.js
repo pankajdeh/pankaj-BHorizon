@@ -5,83 +5,84 @@ import { MdScience, MdBusinessCenter } from 'react-icons/md';
 import MainServices from './MainServices';
 
 const ServicesSection = () => {
-  const services = [
-    {
-      icon: <FaLaptopCode className="text-blue-600 text-4xl" />,
-      title: 'IT Application Development and Integration',
-      details: [
-        'Software Design and Architecture',
-        'Application Design',
-        'Usecase Design',
-      ],
-      link: '/Services/ITApplicationDevelopment',
-    },
-    {
-      icon: <MdScience className="text-green-600 text-4xl" />,
-      title: 'Artificial Intelligence, Machine Learning, and Data Science',
-      details: ['AI and Machine Learning Solutions', 'Data Science'],
-      link: '/Services/AI-MachineLearning&DataScience',
-    },
-    {
-      icon: <MdBusinessCenter className="text-orange-500 text-4xl" />,
-      title: 'Cloud Computing and IT-Enabled Services (ITES)',
-      details: ['Cloud Computing', 'Business Analytics'],
-      link: '/Services/BusinessIntelligence',
-    },
-    {
-      icon: <FaChartLine className="text-purple-500 text-4xl" />,
-      title: 'Geospatial Development, Analytics, and GeoAI',
-      details: [
-        'Geospatial Application Development',
-        'Geospatial Analytics',
-        'GeoAI',
-      ],
-      link: '/Services/GeospatialDevelopmentandGeoAI',
-    },
-    {
-      icon: <FaDatabase className="text-red-500 text-4xl" />,
-      title: 'Database Development and Report Generation',
-      details: [
-        'Database Design and Development',
-        'Relational Database Management Systems',
-        'NoSQL Database Solutions',
-        'Report Generation and Data Reporting',
-      ],
-      link: '/Services/DatabaseDevelopment',
-    },
-    {
-      icon: <FaNetworkWired className="text-teal-500 text-4xl" />,
-      title: 'IT Infrastructure, Networking, and Continuity',
-      details: [
-        'IT Infrastructure Setup and Management',
-        'Networking Solutions',
-        'Data Backup, Disaster Recovery, and Business Continuity',
-        'Digital Transformation Services',
-      ],
-      link: '/Services/it-infrastructure',
-    },
-    {
-      icon: <FaShieldAlt className="text-yellow-500 text-4xl" />,
-      title: 'Cybersecurity and IT Governance',
-      details: [
-        'Cybersecurity Solutions',
-        'IT Audit and Compliance Services',
-        'IT Risk and Governance Consulting',
-      ],
-      link: '/Services/cybersecurity',
-    },
-    {
-      icon: <FaCloud className="text-cyan-600 text-4xl" />,
-      title: 'Cloud Computing and IT-Enabled Services (ITES)',
-      details: [
-        'Cloud Computing Services',
-        'IT Support and Managed Services',
-        'Application Support and Maintenance (AMC)',
-        'Hardware and Software Procurement',
-      ],
-      link: '/Services/IT-EnabledServices',
-    },
-  ];
+  
+  // const services = [
+  //   {
+  //     icon: <FaLaptopCode className="text-blue-600 text-4xl" />,
+  //     title: 'IT Application Development and Integration',
+  //     details: [
+  //       'Software Design and Architecture',
+  //       'Application Design',
+  //       'Usecase Design',
+  //     ],
+  //     link: '/Services/ITApplicationDevelopment',
+  //   },
+  //   {
+  //     icon: <MdScience className="text-green-600 text-4xl" />,
+  //     title: 'Artificial Intelligence, Machine Learning, and Data Science',
+  //     details: ['AI and Machine Learning Solutions', 'Data Science'],
+  //     link: '/Services/AI-MachineLearning&DataScience',
+  //   },
+  //   {
+  //     icon: <MdBusinessCenter className="text-orange-500 text-4xl" />,
+  //     title: 'Cloud Computing and IT-Enabled Services (ITES)',
+  //     details: ['Cloud Computing', 'Business Analytics'],
+  //     link: '/Services/BusinessIntelligence',
+  //   },
+  //   {
+  //     icon: <FaChartLine className="text-purple-500 text-4xl" />,
+  //     title: 'Geospatial Development, Analytics, and GeoAI',
+  //     details: [
+  //       'Geospatial Application Development',
+  //       'Geospatial Analytics',
+  //       'GeoAI',
+  //     ],
+  //     link: '/Services/GeospatialDevelopmentandGeoAI',
+  //   },
+  //   {
+  //     icon: <FaDatabase className="text-red-500 text-4xl" />,
+  //     title: 'Database Development and Report Generation',
+  //     details: [
+  //       'Database Design and Development',
+  //       'Relational Database Management Systems',
+  //       'NoSQL Database Solutions',
+  //       'Report Generation and Data Reporting',
+  //     ],
+  //     link: '/Services/DatabaseDevelopment',
+  //   },
+  //   {
+  //     icon: <FaNetworkWired className="text-teal-500 text-4xl" />,
+  //     title: 'IT Infrastructure, Networking, and Continuity',
+  //     details: [
+  //       'IT Infrastructure Setup and Management',
+  //       'Networking Solutions',
+  //       'Data Backup, Disaster Recovery, and Business Continuity',
+  //       'Digital Transformation Services',
+  //     ],
+  //     link: '/Services/it-infrastructure',
+  //   },
+  //   {
+  //     icon: <FaShieldAlt className="text-yellow-500 text-4xl" />,
+  //     title: 'Cybersecurity and IT Governance',
+  //     details: [
+  //       'Cybersecurity Solutions',
+  //       'IT Audit and Compliance Services',
+  //       'IT Risk and Governance Consulting',
+  //     ],
+  //     link: '/Services/cybersecurity',
+  //   },
+  //   {
+  //     icon: <FaCloud className="text-cyan-600 text-4xl" />,
+  //     title: 'Cloud Computing and IT-Enabled Services (ITES)',
+  //     details: [
+  //       'Cloud Computing Services',
+  //       'IT Support and Managed Services',
+  //       'Application Support and Maintenance (AMC)',
+  //       'Hardware and Software Procurement',
+  //     ],
+  //     link: '/Services/IT-EnabledServices',
+  //   },
+  // ];
 
   return (
     <section className="py-20 ">

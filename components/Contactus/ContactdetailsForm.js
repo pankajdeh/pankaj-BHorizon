@@ -197,9 +197,15 @@ const ContactdetailsForm = () => {
 
   return (
     <>
-      <div className="flex flex-col gap-4 justify-start items-start px-3 py-1 w-full ring-1 ring-gray-200 p-4 rounded-md  md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black ">
+    {/* ring-1 ring-gray-200 p-4 rounded-md shadow-input transition-transform duration-300  */}
+      <div className="shadow-lg rounded-lg   p-6  mx-auto  flex flex-col gap-4 justify-start items-start px-3 py-1 w-full   md:rounded-2xl p-4 md:p-8  bg-white dark:bg-black ">
         <div className="flex flex-col w-full justify-start items-start p-2 py-4 gap-4">
-          <form className="w-full" onSubmit={handleSubmit}>
+            
+              <div className=" mb-6">
+                  <div  className=" lg:text-4xl  text-3xl  font-bold "> Get in touch </div>
+                  <div  className=" text-md mt-1 "> You can reach us anytime </div>
+              </div>
+          <form className="w-full  mx-auto " onSubmit={handleSubmit}>
             <div className="w-full grid lg:grid-cols-2 grid-cols-1 gap-6 place-content-center justify-between items-start">
               <Input
                 type="text"
@@ -209,7 +215,7 @@ const ContactdetailsForm = () => {
                 label="First Name"
 
                 radius="sm"
-                className="w-full rounded-none"
+                className="w-full  rounded-none"
                 size="lg"
                 placeholder="First Name"
                 // startContent={
@@ -314,21 +320,34 @@ const ContactdetailsForm = () => {
                 // }
               />
             </div>
-
-    
-
             {/*  */}
-            <div 
+            {/* <div 
             className="w-full flex justify-center items-center mt-4"
             >
               <Button
                 type="submit"
-                className="w-60 rounded-full bg-[#132b57] text-white text-center"
+                className="w-full h-[3rem] rounded-full bg-[#132b57]  text-white text-center "
               >
                 Submit &rarr;
-                <BottomGradient />
+               
               </Button>
-            </div>
+            </div> */}
+
+<div className="w-full flex justify-center items-center mt-4">
+  <Button
+    type="submit"
+    className="w-full h-[3rem] rounded-full bg-[#132b57] text-white text-center font-semibold flex items-center justify-center gap-2 
+               transition-all duration-300 hover:bg-[#365b8b] hover:shadow-lg group"
+  >
+    <span className="group-hover:translate-x-1 transition-transform duration-300">
+      Submit
+    </span>
+    <span className="group-hover:translate-x-1 transition-transform duration-300">
+      &rarr;
+    </span>
+  </Button>
+</div>
+
           </form>
         </div>
       </div>
