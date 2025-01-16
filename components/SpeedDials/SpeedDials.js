@@ -59,14 +59,14 @@ export default function SpeedDials() {
       {!speedDialOpen && (
         <ScrollTop
           threshold={100}
-          className="w-8 h-8 rounded-full bg-[#36a39e] flex items-center justify-center shadow-lg fixed bottom-20 left-8"
+          className="w-8 h-8 rounded-full bg-[#447ab1] flex items-center justify-center shadow-lg fixed bottom-20 left-8"
           icon="pi pi-arrow-up text-white text-lg"
         />
       )}
       
       {/* SpeedDial button */}
       <SpeedDial
-        className="bg-[#36a39e] h-12 w-12 text-white cursor-pointer shadow-xl flex items-center justify-center rounded-full hover:bg-[#0b8d7c] fixed bottom-6 left-6"
+        className="bg-[#447ab1] h-12 w-12 text-white cursor-pointer shadow-xl flex items-center justify-center rounded-full hover:bg-[#0b8d7c] fixed bottom-6 left-6"
         model={items}
         radius={90}
         type="quarter-circle"
