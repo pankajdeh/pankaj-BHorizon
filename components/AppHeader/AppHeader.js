@@ -77,19 +77,19 @@ const AppHeader = () => {
     setActiveDropdown(null);
   };
 
-  const handleMouseEnter = (label) => {
-    setActiveDropdown(label);
-    setIsHovered(true);
-  };
+  // const handleMouseEnter = (label) => {
+  //   setActiveDropdown(label);
+  //   setIsHovered(true);
+  // };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-    setTimeout(() => {
-      if (!isHovered) {
-        setActiveDropdown(null);
-      }
-    }, 200);
-  }
+  // const handleMouseLeave = () => {
+  //   setIsHovered(false);
+  //   setTimeout(() => {
+  //     if (!isHovered) {
+  //       setActiveDropdown(null);
+  //     }
+  //   }, 200);
+  // }
 
 
   useEffect(() => {
@@ -184,7 +184,7 @@ const AppHeader = () => {
 
     {/* 3 - reals*/}
 
-    {/* <div className="hidden md:flex items-center gap-8">
+    <div className="hidden md:flex items-center gap-8">
       {navItems.map((item) => (
         <div
           key={item.label}
@@ -197,7 +197,7 @@ const AppHeader = () => {
         >
           <Link
             href={item.href}
-            className={`flex items-center gap-1 py-2 text-md font-semibold  transition-colors duration-200
+            className={`flex items-center gap-1 py-2 text-md font-semibold transition-all duration-300 ease-in-out
               ${activeDropdown === item.label
                 ? "text-[#447ab1]"
                 : "text-gray-600 hover:[#447ab1]"
@@ -215,11 +215,21 @@ const AppHeader = () => {
 
           {item.items && activeDropdown === item.label && (
             <div
-              className="absolute top-full z-10 mt-3  w-[450px] rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 grid grid-cols-2 gap-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 ease-out"
+              // className="absolute top-full z-10 mt-3  w-[450px] rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 grid grid-cols-2 gap-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 ease-out"
+              // style={{
+              //   left: "auto",
+              //   right: 0,
+              // }}
+
+              className="absolute top-full right-0 mt-2 w-[450px]  rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 grid grid-cols-2 gap-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-300 ease-in-out"
               style={{
-                left: "auto",
+                // opacity: isHovered ? 1 : 0,
+                   left: "auto",
                 right: 0,
+                // transform: isHovered ? "translateY(0)" : "translateY(-10px)",
+                transition: "opacity 0.3s ease, transform 0.3s ease",
               }}
+
               onMouseEnter={() => setHovering(true)}
               onMouseLeave={() => setHovering(false)}
             >
@@ -236,7 +246,7 @@ const AppHeader = () => {
           )}
         </div>
       ))}
-    </div> */}
+    </div>
 
 
 {/* 4 */}
@@ -297,7 +307,7 @@ const AppHeader = () => {
 
 {/* 5 */}
 
-<div className="hidden md:flex items-center gap-8">
+{/* <div className="hidden md:flex items-center gap-8">
       {navItems.map((item) => (
         <div
           key={item.label}
@@ -305,7 +315,7 @@ const AppHeader = () => {
           onMouseEnter={() => handleMouseEnter(item.label)}
           onMouseLeave={handleMouseLeave}
         >
-          {/* Parent Link */}
+         
           <Link
             href={item.href}
             className={`flex items-center gap-1 py-2 text-md font-semibold transition-all duration-300 ease-in-out ${
@@ -324,7 +334,8 @@ const AppHeader = () => {
             )}
           </Link>
 
-          {/* Dropdown Menu */}
+        
+
           {item.items && activeDropdown === item.label && (
             <div
               className="absolute top-full right-0 mt-4 w-[450px]  rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 grid grid-cols-2 gap-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-300 ease-in-out"
@@ -347,7 +358,7 @@ const AppHeader = () => {
           )}
         </div>
       ))}
-    </div>
+    </div> */}
 
 
 
