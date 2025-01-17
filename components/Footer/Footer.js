@@ -5,6 +5,9 @@ import wave from "@/public/Images/wave.webp";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { FaArrowRight } from "react-icons/fa";
 
+import logo from "@/public/logo.png"
+// import Image from "next/image";
+
 
 import Image from "next/image";
 function Footer() {
@@ -18,7 +21,9 @@ function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/" className="block  ">
-            <div className="text-black  text-xl font-bold   ">Beyond Horizon</div>
+            {/* <div className="text-black  text-xl font-bold   ">Beyond Horizon</div> */}
+            <Image width={80} height={20}  src={logo} alt="logo" />
+            
               {/* <Image
                 src="/placeholder.svg?height=80&width=150"
                 alt="Beyond Horizon"
