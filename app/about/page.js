@@ -8,8 +8,15 @@ import AboutusHero from "../../public/Images/AboutusHero.jpg"
 import wave from "@/public/Images/wave.webp";
 import AnimatedUIloader from '@/components/AnimatedUIloader/AnimatedUIloader';
 import ServicesSection from '@/components/ServicesComponent/ServiceSection';
+import "aos/dist/aos.css"; 
+import AOS from "aos";
+import { useEffect } from "react";
 
 const page = () => {
+    useEffect(() => {
+      AOS.init();
+    }, []);
+
   return (
 
     <>
@@ -54,7 +61,9 @@ const page = () => {
         <div>
         <AnimatedUIloader/>
       </div>
-      <div>
+      <div data-aos="fade-up" 
+        data-aos-duration="900" 
+        data-aos-delay="200">
         <ServicesSection/>
       </div>
     {/* <Image src={wave} alt='wave' className='w-full relative -z-1 mt-5'/> */}
