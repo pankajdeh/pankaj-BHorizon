@@ -85,10 +85,13 @@ export default function AnimatedHero() {
               }`}
               aria-label={`Show slide ${index + 1}`}
             >
-              {String(index + 1).padStart(2, '0')}
+              {/* {String(index + 1).padStart(2, '0')} */}
+              {currentSlide === index ? '●' : '○'}
             </button>
           ))}
         </div>
+
+
       </div>
   
       {/* Image Section */}
@@ -161,7 +164,7 @@ export default function AnimatedHero() {
             </motion.div>
           </AnimatePresence>
 
-          <div className="mt-8 flex justify-center gap-4 lg:justify-start">
+          {/* <div className="mt-8 flex justify-center gap-4 lg:justify-start">
             {heroContent.map((_, index) => (
               <button
                 key={index}
@@ -174,7 +177,25 @@ export default function AnimatedHero() {
                 {String(index + 1).padStart(2, '0')}
               </button>
             ))}
-          </div>
+          </div> */}
+
+<div className="mt-8 flex justify-center gap-4 lg:justify-start">
+  {heroContent.map((_, index) => (
+    <button
+      key={index}
+      onClick={() => setCurrentSlide(index)}
+      className={`text-lg font-semibold transition-colors duration-200 ${
+        currentSlide === index ? 'text-blue-600' : 'text-gray-400'
+      }`}
+      aria-label={`Show slide ${index + 1}`}
+    >
+      {currentSlide === index ? '●' : '○'}
+    </button>
+  ))}
+</div>
+
+
+
         </div>
 
         {/* Image Section */}
