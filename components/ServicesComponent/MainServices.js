@@ -122,7 +122,7 @@ const MainServices = () => {
               <div className="mt-auto text-center">
                 <Link
                   href={service.link}
-                  className="bg-[#447ab1] hover:bg-[#365b8b]  text-white px-4 py-2 rounded-md hover:bg-blue-700  transition"
+                  className="bg-[#447ab1] hover:bg-[#365b8b]  text-white px-4 py-2 rounded-md   transition"
                 >
                   Learn More
                 </Link>
