@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from 'lucide-react';
+import logo from "@/public/logo.png"
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -110,9 +111,10 @@ const AppHeader = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <h2 className="text-xl font-semibold text-[#447ab1]">
+            {/* <h2 className="text-xl font-semibold text-[#447ab1]">
               Beyond Horizon
-            </h2>
+            </h2> */}
+            <Image src={logo} />
           </Link>
 
           {/* Mobile Menu Toggle */}
