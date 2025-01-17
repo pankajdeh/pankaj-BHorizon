@@ -4,11 +4,20 @@ import Image from "next/image";
 import Aboutus from "../../public/Images/Aboutus.png";
 import Hero1 from "../../public/Images/Hero1.png";
 import round from "@/public/Images/round.png";
-
+import "aos/dist/aos.css"; 
+import AOS from "aos";
 import AnimatedUIloader from "../AnimatedUIloader/AnimatedUIloader";
 import ServicesSection from "../ServicesComponent/ServiceSection";
+import { useEffect } from "react";
+
+
 
 export default function AboutSection() {
+
+    useEffect(() => {
+      AOS.init();
+    }, []);
+
   return (
     <div >
      
@@ -16,7 +25,9 @@ export default function AboutSection() {
      <div className=" relative from-gray-50 to-white py-16 px-6 lg:px-20">
       {/* bg-gradient-to-b */}
 
-      <div className="max-w-7xl  mb-10 mx-auto flex flex-col lg:flex-row items-center gap-10">
+      <div className="max-w-7xl  mb-10 mx-auto flex flex-col lg:flex-row items-center gap-10" data-aos="fade-up" 
+        data-aos-duration="900" 
+        data-aos-delay="200">
         {/* Left Section - Image */}
        
 
@@ -71,7 +82,9 @@ export default function AboutSection() {
         </div>
 
         {/* Right Section - Text */}
-        <div className="w-full lg:w-1/2 text-center lg:text-left">
+        <div className="w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-left" 
+        data-aos-duration="900" 
+        data-aos-delay="200" >
           <h1 className="text-4xl font-bold text-[#447ab1] mb-4">
             About Us
           </h1>

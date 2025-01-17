@@ -162,7 +162,7 @@ export default function ProfessionalServicesGrid() {
 
   <div className="mx-auto lg:py-12 py-8">
     <div className="flex lg:flex-row gap-4 justify-around  flex-col lg:mx-20">
-      <div className="bg-dot-pattern">
+      <div className="bg-dot-pattern hidden lg:block">
         <Image
           src={ServicesBg}
           alt="ServicesBg"
@@ -217,9 +217,9 @@ export default function ProfessionalServicesGrid() {
               key={index}
               className="p-4 "
               data-aos="fade-up"
-              data-aos-duration="1000"
+              data-aos-duration="500"
               
-              data-aos-delay={200 + index * 200}
+              data-aos-delay={100 + index * 100}
             >
               <div className=" rounded-lg p-4 hover:shadow-xl ">
                 <div className="flex items-center">

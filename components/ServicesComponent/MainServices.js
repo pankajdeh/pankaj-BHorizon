@@ -63,7 +63,7 @@ const MainServices = () => {
     },
     {
       icon: <FaNetworkWired className="text-teal-500 text-4xl" />,
-      title: 'IT Infrastructure, Networking, and Continuity',
+      title: 'IT Infrastructure, Networking & Continuity',
       details: [
         'IT Infrastructure Setup and Management',
         'Networking Solutions',
