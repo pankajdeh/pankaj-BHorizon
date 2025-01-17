@@ -3,7 +3,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div><Contactus/></div>
+    <div className='w-full bg-blue-50 '><Contactus/></div>
   )
 }
 

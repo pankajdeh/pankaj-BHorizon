@@ -198,7 +198,7 @@ const ContactdetailsForm = () => {
   return (
     <>
     {/* ring-1 ring-gray-200 p-4 rounded-md shadow-input transition-transform duration-300  */}
-      <div className="shadow-lg rounded-lg   p-6  mx-auto  flex flex-col gap-4 justify-start items-start px-3 py-1 w-full   md:rounded-2xl p-4 md:p-8  bg-white dark:bg-black ">
+      <div className="shadow-lg rounded-lg   p-6   flex flex-col gap-4 justify-start items-start px-3 py-1 w-full   md:rounded-2xl p-4 md:p-8  bg-white dark:bg-black ">
         <div className="flex flex-col w-full justify-start items-start p-2 py-4 gap-4">
             
               <div className=" mb-6">

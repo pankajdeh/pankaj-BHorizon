@@ -172,14 +172,14 @@ function Footer() {
   <div className="text-lg  font-semibold"> Contact Us</div>
   {/* Email Section */}
   <div className="flex items-center gap-4 group">
-    <div className="bg-[#447ab1] p-3 rounded-full transition-all duration-300 group-hover:bg-[#365b8b]">
+    <div className="bg-[#447ab1] lg:p-3 md:p-3 p-2 rounded-full transition-all duration-300 group-hover:bg-[#365b8b]">
       <Mail className="text-white w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
     </div>
     <div className="flex flex-col">
-      <span className="text-black group-hover:text-[#365b8b] transition-colors duration-300">
+      <span className="lg:text-md md:text-md text-sm text-black group-hover:text-[#365b8b] transition-colors duration-300">
         support@beyondhorizontech.com
       </span>
-      <span className="text-black group-hover:text-[#365b8b] transition-colors duration-300">
+      <span className=" lg:text-md md:text-md text-sm text-black group-hover:text-[#365b8b] transition-colors duration-300">
         projects@beyondhorizontech.com
       </span>
     </div>
@@ -187,7 +187,7 @@ function Footer() {
 
   {/* Phone Section */}
   <div className="flex items-center gap-4 group">
-    <div className="bg-[#447ab1] p-3 rounded-full transition-all duration-300 group-hover:bg-[#365b8b]">
+    <div className="bg-[#447ab1] lg:p-3 md:p-3 p-2 rounded-full transition-all duration-300 group-hover:bg-[#365b8b]">
       <Phone className="text-white w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
     </div>
     <span className="text-black group-hover:text-[#365b8b] transition-colors duration-300">
@@ -197,7 +197,7 @@ function Footer() {
 
   {/* Address Section */}
   <div className="flex items-center gap-4 group">
-    <div className="bg-[#447ab1] group-hover:bg-[#365b8b] p-3 rounded-full transition-all duration-300 ">
+    <div className="bg-[#447ab1] lg:p-3 md:p-3 p-2 group-hover:bg-[#365b8b]  rounded-full transition-all duration-300 ">
       <MapPin className="text-white w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
     </div>
     <div className="text-black group-hover:text-[#365b8b] transition-colors duration-300">

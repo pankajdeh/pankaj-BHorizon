@@ -9,7 +9,8 @@ import ContactMap from './ContactMap';
 const Contactus = () => {
   return (
     <>
-    <div className="relative h-96 bg-black overflow-hidden">
+    <div className='w-full '>
+    <div className="mx-auto w-full relative h-96 bg-black overflow-hidden ">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -43,8 +44,17 @@ const Contactus = () => {
         </h1>
       </div>
     </div>
-    <ContactForm/>
-    <ContactMap/>
+
+<div className='px-2 mx-auto '>
+<ContactForm/>
+</div>
+
+<div>
+<ContactMap/>
+
+</div>
+
+    </div>
     </>
 
   )

@@ -32,6 +32,8 @@ export default function RootLayout({ children }) {
         className={inter.className}
       >
          <Providers>
+
+          <div className="w-full overflow-x-hidden">
          <AppHeader/>
 
          <div>
@@ -44,6 +46,8 @@ export default function RootLayout({ children }) {
 
          {children}
          <Footer/>
+
+         </div>
          </Providers>
         
       </body>
